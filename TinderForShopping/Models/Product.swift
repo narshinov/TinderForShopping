@@ -8,10 +8,10 @@
 import Foundation
 
 struct Product: Identifiable {
+
     let id = UUID()
     var image: String
     var title: String
-    
     
     static let bread: Product = Product(image: "🍞", title: "Bread")
     static let tea: Product = Product(image: "🍵", title: "Tea")

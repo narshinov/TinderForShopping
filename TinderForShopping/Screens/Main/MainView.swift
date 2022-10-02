@@ -13,6 +13,7 @@ struct MainView: View {
     
     var body: some View {
         ZStack {
+            FinishView()
             ForEach(products) { product in
                 ProductCardView(product: product)
             }
