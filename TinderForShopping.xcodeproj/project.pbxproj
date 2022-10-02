@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		11E97CB628E9F1AD00D63E82 /* TinderForShoppingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E97CB528E9F1AD00D63E82 /* TinderForShoppingApp.swift */; };
-		11E97CB828E9F1AD00D63E82 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E97CB728E9F1AD00D63E82 /* ContentView.swift */; };
 		11E97CBA28E9F1B000D63E82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11E97CB928E9F1B000D63E82 /* Assets.xcassets */; };
 		11E97CBD28E9F1B000D63E82 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11E97CBC28E9F1B000D63E82 /* Preview Assets.xcassets */; };
+		11E97CC828E9F32E00D63E82 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E97CC728E9F32E00D63E82 /* Product.swift */; };
+		11E97CCC28E9F39500D63E82 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E97CCB28E9F39500D63E82 /* MainView.swift */; };
+		11E97CCE28E9F3BC00D63E82 /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E97CCD28E9F3BC00D63E82 /* ProductCardView.swift */; };
+		11E97CD128E9F88400D63E82 /* ShoppingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E97CD028E9F88400D63E82 /* ShoppingListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		11E97CB228E9F1AD00D63E82 /* TinderForShopping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinderForShopping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11E97CB528E9F1AD00D63E82 /* TinderForShoppingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderForShoppingApp.swift; sourceTree = "<group>"; };
-		11E97CB728E9F1AD00D63E82 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		11E97CB928E9F1B000D63E82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11E97CBC28E9F1B000D63E82 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		11E97CC728E9F32E00D63E82 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		11E97CCB28E9F39500D63E82 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		11E97CCD28E9F3BC00D63E82 /* ProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
+		11E97CD028E9F88400D63E82 /* ShoppingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				11E97CB528E9F1AD00D63E82 /* TinderForShoppingApp.swift */,
-				11E97CB728E9F1AD00D63E82 /* ContentView.swift */,
+				11E97CC628E9F31C00D63E82 /* Models */,
+				11E97CC328E9F2EF00D63E82 /* Screens */,
 				11E97CB928E9F1B000D63E82 /* Assets.xcassets */,
 				11E97CBB28E9F1B000D63E82 /* Preview Content */,
 			);
@@ -65,6 +72,48 @@
 				11E97CBC28E9F1B000D63E82 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		11E97CC328E9F2EF00D63E82 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				11E97CCF28E9F87300D63E82 /* ShoppingList */,
+				11E97CC928E9F35E00D63E82 /* Main */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		11E97CC628E9F31C00D63E82 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				11E97CC728E9F32E00D63E82 /* Product.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		11E97CC928E9F35E00D63E82 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				11E97CCA28E9F36B00D63E82 /* Views */,
+				11E97CCB28E9F39500D63E82 /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		11E97CCA28E9F36B00D63E82 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				11E97CCD28E9F3BC00D63E82 /* ProductCardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		11E97CCF28E9F87300D63E82 /* ShoppingList */ = {
+			isa = PBXGroup;
+			children = (
+				11E97CD028E9F88400D63E82 /* ShoppingListView.swift */,
+			);
+			path = ShoppingList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +186,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11E97CB828E9F1AD00D63E82 /* ContentView.swift in Sources */,
+				11E97CD128E9F88400D63E82 /* ShoppingListView.swift in Sources */,
+				11E97CCC28E9F39500D63E82 /* MainView.swift in Sources */,
+				11E97CC828E9F32E00D63E82 /* Product.swift in Sources */,
 				11E97CB628E9F1AD00D63E82 /* TinderForShoppingApp.swift in Sources */,
+				11E97CCE28E9F3BC00D63E82 /* ProductCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +326,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,6 +355,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
