@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct ProductCardView: View {
+    
+    @ObservedResults(ProductRealm.self) var prod
     
     var product: Product
     @State private var offset = CGSize.zero
@@ -50,6 +53,12 @@ struct ProductCardView: View {
             offset = CGSize(width: -500, height: 0)
         case 150...500:
             print("\(product) added")
+            
+            let produ = ProductRealm()
+            produ.image = product.image
+            produ.title = product.title
+            $prod.append(produ)
+            
             offset = CGSize(width: 500, height: 0)
         default:
             offset = .zero
