@@ -12,10 +12,20 @@ struct MainView: View {
     private var products = Product.products
     
     var body: some View {
-        ZStack {
-            FinishView()
-            ForEach(products) { product in
-                ProductCardView(product: product)
+        NavigationView {
+            ZStack {
+                FinishView()
+                ForEach(products) { product in
+                    ProductCardView(product: product)
+                }
+            }.toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "line.3.horizontal")
+                    }.foregroundColor(.black)
+                }
             }
         }
     }
