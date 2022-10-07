@@ -25,7 +25,12 @@ struct ShoppingListView: View {
                         Text(product.image)
                         Text(product.title)
                     }
-                }.onDelete(perform: $products.remove)
+                    .swipeActions(edge: .leading, allowsFullSwipe: false) {
+                        Text("Edit")
+                    }
+                }
+                .onDelete(perform: $products.remove)
+                
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -33,22 +38,17 @@ struct ShoppingListView: View {
                         isPresented.toggle()
                     } label: {
                         Image(systemName: "plus")
-                    }.popover(isPresented: $isPresented) {
-                        VStack {
-                            Text("Add product")
-                            TextField("Product", text: $productInput)
-                            Button {
-                                let product = ProductRealm()
-                                product.image = ""
-                                product.title = productInput
-                                $products.append(product)
-                            } label: {
-                                Text("Save")
-                            }
-
-                        }
-                    }
-
+                    }.alert("Add product", isPresented: $isPresented, actions: {
+                        TextField("Product", text: $productInput)
+                        
+                        Button("Add", action: {
+                            let product = ProductRealm()
+                            product.image = ""
+                            product.title = productInput
+                            $products.append(product)
+                        })
+                        Button("Cancel", role: .cancel, action: {})
+                    })
                 }
             }
         }

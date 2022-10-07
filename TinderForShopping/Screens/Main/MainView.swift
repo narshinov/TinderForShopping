@@ -10,6 +10,7 @@ import SwiftUI
 struct MainView: View {
     
     private var products = Product.products
+    @State private var showShoppingList: Bool = false
     
     var body: some View {
         NavigationView {
@@ -21,10 +22,13 @@ struct MainView: View {
             }.toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
-                        
+                        showShoppingList.toggle()
                     } label: {
                         Image(systemName: "line.3.horizontal")
                     }.foregroundColor(.black)
+                        .sheet(isPresented: $showShoppingList) {
+                            ShoppingListView()
+                        }
                 }
             }
         }
